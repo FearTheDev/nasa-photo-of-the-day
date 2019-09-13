@@ -1,17 +1,28 @@
-import React from "react";
-import {data} from "../DateData";
+import React, {useState} from "react";
+import {InputGroup, InputGroupAddon, InputGroupText} from 'reactstrap';
+import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from 'react-datepicker';
+
+
 
 const DateSelector = props =>{
+    
+    const [startDate, setStartDate] = useState(new Date());
+
+    const updateCall = value =>{
+        setStartDate(value);
+        props.fnc(value);
+    };
+    
     return (
         <div>
-            <h1>Pick a Date: </h1>
-            <select onChange={props.fnc}>
-                {
-                    data.map((date, index) =>{
-                        return (<option key={index} value={date}>{date}</option>);
-                    })
-                }
-            </select>
+        <InputGroup>
+                
+                <InputGroupAddon addonType="prepend">
+                    <InputGroupText className="date-picker-prepend">Choose a date: </InputGroupText>
+                </InputGroupAddon>
+                <DatePicker className="date-picker" selected={startDate} dateFormat="yyyy-MM-dd" onChange={ date => updateCall(date) }/>
+        </InputGroup>
         </div>
     );
 
