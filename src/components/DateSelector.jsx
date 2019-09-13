@@ -8,6 +8,11 @@ import DatePicker from 'react-datepicker';
 const DateSelector = props =>{
     
     const [startDate, setStartDate] = useState(new Date());
+
+    const updateCall = value =>{
+        setStartDate(value);
+        props.fnc(value);
+    };
     
     return (
         <div>
@@ -15,7 +20,7 @@ const DateSelector = props =>{
                 <InputGroupAddon addonType="prepend">
                     <InputGroupText>Choose a date: </InputGroupText>
                 </InputGroupAddon>
-                <DatePicker className="date-picker" selected={startDate} dateFormat="yyyy-MM-dd" onChange={date => setStartDate(date)}/>
+                <DatePicker className="date-picker" selected={startDate} dateFormat="yyyy-MM-dd" onChange={ date => updateCall(date) }/>
             
         </InputGroup>
         </div>
