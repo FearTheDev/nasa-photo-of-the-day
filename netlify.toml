@@ -1,3 +1,3 @@
 [build]
-base = "/public/"
-publish = "/public/"
+base = "/src/"
+publish = "/src/"
