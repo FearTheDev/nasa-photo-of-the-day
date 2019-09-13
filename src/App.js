@@ -14,14 +14,13 @@ function App() {
   useEffect( () =>{
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${date}`)
       .then(response => {
-        setApod(apod => response.data);
-        console.log(apod);
+        setApod(response.data);
       })
         .catch(error => console.log(`Error: ${error}`));
   }, [date]);
 
-  const updateDate = event =>{
-    setDate(event.target.value);
+  const updateDate = value =>{
+    setDate(`${value.getFullYear().toString()}-${(value.getMonth()+ 1).toString().padStart(2,0)}-${value.getDate().toString().padStart(2,0)}`);
   };
 
   return (

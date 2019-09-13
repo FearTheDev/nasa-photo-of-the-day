@@ -64,6 +64,8 @@
 
 .display-body img{
   height:100%;
+  width:100%;
+  object-fit: cover;
 }
 
 .display-description{
@@ -88,7 +90,7 @@
 
 .display-description p{
   color:#DDD;
-  font-size:1.0rem;
+  font-size:1.1rem;
 }
 
 .date-picker{
