@@ -17,11 +17,11 @@ const DateSelector = props =>{
     return (
         <div>
         <InputGroup>
+                
                 <InputGroupAddon addonType="prepend">
-                    <InputGroupText>Choose a date: </InputGroupText>
+                    <InputGroupText className="date-picker-prepend">Choose a date: </InputGroupText>
                 </InputGroupAddon>
                 <DatePicker className="date-picker" selected={startDate} dateFormat="yyyy-MM-dd" onChange={ date => updateCall(date) }/>
-            
         </InputGroup>
         </div>
     );

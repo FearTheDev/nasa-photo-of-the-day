@@ -1,28 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Cantora+One|Fira+Sans|Fira+Sans+Extra+Condensed|Hind+Madurai|Lato|Noto+Sans+JP|PT+Sans|Roboto+Condensed|Source+Sans+Pro|Varela+Round&display=swap');
+
 *{
   padding:0;
   margin:0;
   box-sizing: border-box;
   font-size:62.5%;
-  font-size:0.8rem;
+  font-size:1rem;
+  font-family: 'Fira Sans Extra Condensed';
 }
 
-.App {
-  width:100vw;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Hind Madurai';
 }
 
 .wrapper{
@@ -32,24 +20,23 @@
 .display-header{
   background-color:#282c34;
   color:#fff;
-  height:75px;
+  height:55px;
   width:100vw;
   display:flex;
   align-items:center;
-  justify-content: space-around;
-  border-bottom: 1px solid #383c44;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff2;
   position:fixed;
   top:0;
   left:0;
   z-index:100;
 }
 
-.display-header select{
-  font-size:2rem;
-}
-
 .display-header h1{
-  font-size: 2rem;
+  font-size: 1.6rem;
+  padding:0;
+  margin:0;
+  margin-left:100px;
 }
 
 .display-body{
@@ -59,7 +46,7 @@
   justify-content: center;
   background-color: #181A22;
   height:100vh;
-  padding-top:75px;
+  padding-top:55px;
 }
 
 .display-body img{
@@ -72,30 +59,39 @@
   position:absolute;
   right:0;
   bottom:40px;
-  background-color:#282c34AA;
-  padding:20px;
-  width:85%;
+  background-color:#181A2288;
+  padding:10px 20px;
+  width:95%;
   border-top-left-radius:10px;
   border-bottom-left-radius:10px;
-  border-top: 1px solid #383c44;
-  border-bottom: 1px solid #383c44;
-  border-left: 1px solid #383c44;
+  border-top: 2px solid #383c4477;
+  border-bottom: 2px solid #383c4477;
+  border-left: 2px solid #383c4477;
 }
 
 .display-description h3{
   color:#DDD;
-  margin:10px;
-  font-size:2rem;
+  margin:10px 0;
+  font-size:1.6rem;
+  font-weight:600;
 }
 
 .display-description p{
   color:#DDD;
-  font-size:1.1rem;
+  font-size:1.32rem;
 }
 
 .date-picker{
-  font-size:1.6rem;
+  width:150px;
+  font-size:1.05rem;
+  padding:3px 10px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border:none;
+  margin-right:100px;
+}
+
+.date-picker-prepend{
+  height:31px;
+  width:110px;
 }
